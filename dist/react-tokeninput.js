@@ -196,7 +196,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    selected: React.PropTypes.array.isRequired,
 	    menuContent: React.PropTypes.any,
 	    showListOnFocus: React.PropTypes.bool,
-	    placeholder: React.PropTypes.string
+	    placeholder: React.PropTypes.string,
+	    autoFocus: React.PropTypes.bool
 	  },
 	
 	  getDefaultProps: function() {
@@ -258,7 +259,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          onSelect: this.handleSelect,
 	          onRemoveLast: this.handleRemoveLast,
 	          value: this.state.selectedToken,
-	          placeholder: this.props.placeholder
+	          placeholder: this.props.placeholder,
+	          autoFocus: this.props.autoFocus
 	        },
 	          this.props.menuContent
 	        )
@@ -308,7 +310,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * ```
 	    */
 	    onSelect: React.PropTypes.func,
-	    placeholder: React.PropTypes.string
+	    placeholder: React.PropTypes.string,
+	    autoFocus: React.PropTypes.bool
 	  },
 	
 	  getDefaultProps: function() {
@@ -318,7 +321,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      onSelect: k,
 	      value: null,
 	      showListOnFocus: false,
-	      placeholder: ''
+	      placeholder: '',
+	      autoFocus: false
 	    };
 	  },
 	
@@ -670,7 +674,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        onKeyDown: this.handleKeydown,
 	        onKeyUp: this.handleInputKeyUp,
 	        role: 'combobox',
-	        placeholder: this.props.placeholder
+	        placeholder: this.props.placeholder,
+	        autoFocus: this.props.autoFocus
 	      }),
 	      span({
 	        'aria-hidden': 'true',
